@@ -1,0 +1,25 @@
+[project]
+name = "bmi-unit-tests"
+version = "0.1.0"
+description = "Unit tests for BMI calculation and category classification"
+requires-python = ">=3.10"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "assertpy>=1.1",
+    "pytest>=9.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+pythonpath = ["."]
+
+[tool.uv]
+package = false
+
+[[tool.uv.index]]
+name = "microsoft-pypi"
+url = "https://packagefeedproxy.microsoft.io/pypi/simple/"
+default = true
